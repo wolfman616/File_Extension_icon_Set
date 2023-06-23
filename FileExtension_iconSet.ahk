@@ -24,7 +24,7 @@ menu,tray,icon,% "HBITMAP:*" hbitmap
 ; ListLines,Off
 
 if(!Args1:= a_Args[1]) {
-	msgbox,0x40004,% "Question",% "Add to shell context menu? this can be done manually with the following:`n	add:`nComputer\HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\your_desired_ref_orSubcommand\command\`n""C:\Program Files\Autohotkey13602\AutoHotkeyU64.exe"" ""C:\Script\AHK\z_ConTxt\FileExtension_iconSet.ahk"" ""%l"""
+	msgbox,0x40004,% "Question",% "Add to shell context menu? this can be done manually with the following:`n	add:`nComputer\HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\*your_desired_ref_orSubcommand*\command\`n""C:\Program Files\Autohotkey13602\AutoHotkeyU64.exe"" ""C:\*Scriptloc*\FileExtension_iconSet.ahk"" ""%l"""
 	ifmsgbox,yes
 		runas,% "fa.reg"
 	exitapp,
